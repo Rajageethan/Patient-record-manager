@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}View Record{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>{{ record.title }}</h2>
+    <p><strong>Date:</strong> {{ record.date.strftime('%Y-%m-%d') }}</p>
+    <p><strong>Description:</strong> {{ record.description }}</p>
+    <p><strong>Symptoms:</strong> {{ record.symptoms }}</p>
+    <p><strong>Medications:</strong> {{ record.medications }}</p>
+    <p><strong>Diagnosis:</strong> {{ record.diagnosis }}</p>
+    <p><a href="{{ url_for('main.dashboard') }}">Back to Dashboard</a></p>
+</div>
+{% endblock %}
